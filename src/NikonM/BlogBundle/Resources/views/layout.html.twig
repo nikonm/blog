@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    {% block head %}
+        <link rel="icon" sizes="16x16" href="{{ asset('favicon.ico') }}" />
+        {#<link rel="stylesheet" href="{{ asset('bundles/blog/css/demo.css') }}" />#}
+
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
+        <link rel="stylesheet" href="{{ asset('bundles/blog/css/pure_nikonm.css') }}" />
+    {% endblock %}
+
+    <title>Записки программиста|{% block title %}{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+
+{% block body %}
+
+    <div class="wrapper">
+        <div class="title">
+            <div class="name">Записки программиста</div>
+            <div class="comment">тру кодерам посвящается, говнокодерам здесь не место.</div>
+        </div>
+        <div class="wh-content">
+            <div class="pure-menu pure-menu-open pure-menu-horizontal">
+                <ul>
+                    <li><a href="#">главная</a></li>
+                    <li><a href="#">о себе</a></li>
+                    <li class="pure-menu-selected"><a href="#">не главная</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <div class="footer">
+            Сайт работает как может. А если не работает, то не может.
+        </div>
+    </div>
+
+{% endblock %}
+<script type="text/javascript">
+
+
+</script>
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
+

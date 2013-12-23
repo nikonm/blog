@@ -1,0 +1,16 @@
+_index:
+    pattern:  /
+    defaults: { _controller: BlogBundle:Index:index }
+_index_about:
+    pattern:  /about
+    defaults: { _controller: BlogBundle:Index:about }
+
+
+_demo_secured:
+    resource: "@BlogBundle/Controller/SecuredController.php"
+    type:     annotation
+
+_demo:
+    resource: "@BlogBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /demo

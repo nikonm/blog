@@ -1,0 +1,29 @@
+NikonM\BlogBundle\Entity\User:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        login:
+            type: string
+            nullable: false
+        password:
+            type: string
+            nullable: false
+        email:
+            type: string
+            nullable: false
+        type:
+            type: smallint
+            options:
+              default: 0
+        publicationDate:
+            type: datetime
+            nullable: false
+    oneToMany:
+        nodes:
+            targetEntity: Node
+            mappedBy: author

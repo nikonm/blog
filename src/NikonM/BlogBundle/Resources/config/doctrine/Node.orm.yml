@@ -1,0 +1,21 @@
+NikonM\BlogBundle\Entity\Node:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        body:
+            type: text
+        publicationDate:
+            type: datetime
+            nullable: true
+    manyToOne:
+        author:
+               targetEntity: User
+               joinColumn:
+                  name: authorId
+                  nullable: false
+                  referencedColumnName: id

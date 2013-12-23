@@ -1,0 +1,7 @@
+parameters:
+  twig.extensions.blog.class: NikonM\BlogBundle\Twig\Extension\BlogExtension
+services:
+  twig.extension.blog:
+          class: %twig.extensions.blog.class%
+          tags:
+              - { name: twig.extension }
