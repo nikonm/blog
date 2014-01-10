@@ -1,0 +1,28 @@
+{% extends "BlogBundle::layout.html.twig" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    {% for node in nodes %}
+        <div class="node">
+            <div class="title"><a href="{{ node.url }}">{{ node.title }}</a></div>
+            <div class="comment-count"><a href="#">Помечена ({{ node.commentCount }})</a></div>
+            <div class="body-short">
+                {{ node.bodyShort|raw }}
+                <p class="go-next">
+                    <a href="{{ node.url }}">&lt;? continue; ?&gt;</a>
+                </p>
+            </div>
+            <div class="signature">Записка записана
+        <span class="date">
+            <a href="#">21 августа 2013</a>
+        </span> с отметкой
+        <span class="tags">
+            <a href="#">PHP</a>,
+            <a href="#">OOP</a>,
+            <a href="#">ZF2</a>
+        </span>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

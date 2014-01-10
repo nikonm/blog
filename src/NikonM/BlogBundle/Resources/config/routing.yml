@@ -4,7 +4,9 @@ _index:
 _index_about:
     pattern:  /about
     defaults: { _controller: BlogBundle:Index:about }
-
+_index_blog:
+    pattern:  /blog
+    defaults: { _controller: BlogBundle:Index:blog }
 
 _demo_secured:
     resource: "@BlogBundle/Controller/SecuredController.php"
